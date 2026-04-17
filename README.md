@@ -1,10 +1,13 @@
 # Project_SKB-P3
 
 Team Member:
-Prajakta Padole
-Alok Dhomane
-Pranoti Naxane
-Sushil Baviskar
+Prajakta Padole,
+Alok Dhomane,
+Pranoti Naxane,
+Sushil Baviskar,
+
+Team ID:
+SBK-F27
 
 Problem Statement:
 Autonomous multi omics fusion for climate resilient genomic selection and crop breeding optimazation.
