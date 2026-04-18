@@ -1,16 +1,16 @@
-# Project_SKB-P3
+# React + Vite
 
-Team Member:
-Prajakta Padole,
-Alok Dhomane,
-Pranoti Naxane,
-Sushil Baviskar,
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Team ID:
-SBK-F27
+Currently, two official plugins are available:
 
-Problem Statement:
-Autonomous multi omics fusion for climate resilient genomic selection and crop breeding optimazation.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Description:
-The project is working on an AI-powered High Performance Computing (HPC) platform that will help speed up the development of crops that can withstand climate change. The system uses physics-guided machine learning to predict how well crops will grow and how well they will handle stress in more than 50 different climate scenarios. It does this by combining "enviromics" (data about the environment) with "multi-omics data" (data about genomics and metabolomics). This method moves crop development into the world of "translational breeding," using generative AI to model extreme weather and find causal biological links instead of just correlations. The platform's main goal is to give breeders "breeding blueprints" and tools for choosing parents in their area so that global food security can keep up with a climate that is changing quickly.
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
