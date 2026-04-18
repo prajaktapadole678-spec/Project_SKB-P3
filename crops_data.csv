@@ -1,0 +1,8 @@
+crop_name,optimal_temp_min,optimal_temp_max,optimal_humidity_min,optimal_humidity_max,optimal_rainfall_min,optimal_rainfall_max,drought_tolerance,heat_tolerance,frost_tolerance,description
+Wheat,10,25,40,70,50,100,medium,low,high,"Cool-season cereal crop; thrives in mild temperatures with moderate rainfall. Sensitive to heat stress above 30°C."
+Soybean,20,32,60,85,80,150,low,high,low,"Warm-season legume; prefers hot and humid conditions. Fixes atmospheric nitrogen. Sensitive to frost and drought."
+Maize,18,27,50,70,50,100,medium,medium,low,"Versatile cereal crop; requires moderate rainfall and warm temperatures."
+Rice,20,35,60,80,150,300,low,high,low,"Water-intensive cereal crop; requires high temperatures and standing water or heavy rainfall."
+Cotton,21,30,40,60,50,100,high,high,low,"Cash crop requiring a long frost-free period, plenty of heat, and plenty of sunshine."
+Sugarcane,20,35,60,85,150,250,low,high,low,"Long-duration cash crop; needs hot and humid climate with abundant water supply."
+Groundnut,25,30,50,70,50,100,high,high,low,"Oilseed crop; performs best in sandy loam soils with warm growing conditions and moderate rainfall."

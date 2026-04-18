@@ -79,23 +79,23 @@ const upsertCrop = (row) => {
           optimal_temp_min = ?, optimal_temp_max = ?, optimal_humidity_min = ?, optimal_humidity_max = ?,
           optimal_rainfall_min = ?, optimal_rainfall_max = ?, drought_tolerance = ?, heat_tolerance = ?, frost_tolerance = ?, description = ?
           WHERE crop_name = ?`, [
-            parseFloat(row.optimal_temp_min), parseFloat(row.optimal_temp_max),
-            parseFloat(row.optimal_humidity_min), parseFloat(row.optimal_humidity_max),
-            parseFloat(row.optimal_rainfall_min), parseFloat(row.optimal_rainfall_max),
-            row.drought_tolerance || 'medium', row.heat_tolerance || 'medium', row.frost_tolerance || 'medium',
-            row.description || '', row.crop_name.trim()
-          ], () => resolve('updated'));
-        } else {
+          parseFloat(row.optimal_temp_min), parseFloat(row.optimal_temp_max),
+          parseFloat(row.optimal_humidity_min), parseFloat(row.optimal_humidity_max),
+          parseFloat(row.optimal_rainfall_min), parseFloat(row.optimal_rainfall_max),
+          row.drought_tolerance || 'medium', row.heat_tolerance || 'medium', row.frost_tolerance || 'medium',
+          row.description || '', row.crop_name.trim()
+        ], () => resolve('updated'));
+      } else {
         db.run(`INSERT INTO crop_traits (
             crop_name, optimal_temp_min, optimal_temp_max, optimal_humidity_min, optimal_humidity_max,
             optimal_rainfall_min, optimal_rainfall_max, drought_tolerance, heat_tolerance, frost_tolerance, description
           ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, [
-            row.crop_name.trim(), parseFloat(row.optimal_temp_min), parseFloat(row.optimal_temp_max),
-            parseFloat(row.optimal_humidity_min), parseFloat(row.optimal_humidity_max),
-            parseFloat(row.optimal_rainfall_min), parseFloat(row.optimal_rainfall_max),
-            row.drought_tolerance || 'medium', row.heat_tolerance || 'medium', row.frost_tolerance || 'medium',
-            row.description || ''
-          ], () => resolve('created'));
+          row.crop_name.trim(), parseFloat(row.optimal_temp_min), parseFloat(row.optimal_temp_max),
+          parseFloat(row.optimal_humidity_min), parseFloat(row.optimal_humidity_max),
+          parseFloat(row.optimal_rainfall_min), parseFloat(row.optimal_rainfall_max),
+          row.drought_tolerance || 'medium', row.heat_tolerance || 'medium', row.frost_tolerance || 'medium',
+          row.description || ''
+        ], () => resolve('created'));
       }
     });
   });
