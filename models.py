@@ -25,6 +25,7 @@ class CropTraitResponse(BaseModel):
     optimal_humidity_max: float
     optimal_rainfall_min: float
     optimal_rainfall_max: float
+    optimal_soil_type: str = "Loamy"
     drought_tolerance: str
     heat_tolerance: str
     frost_tolerance: str
@@ -40,6 +41,8 @@ class CropScore(BaseModel):
     temperature_score: float = Field(..., description="Temperature suitability score 0–33.3")
     humidity_score: float = Field(..., description="Humidity suitability score 0–33.3")
     rainfall_score: float = Field(..., description="Rainfall suitability score 0–33.3")
+    soil_score: float = Field(default=0.0, description="Soil suitability bonus (0 or 10)")
+    soil_match: bool = Field(default=False, description="Whether user's soil matches crop's optimal")
     status: str = Field(..., description="Excellent / Good / Fair / Poor")
     insights: list[str] = Field(default_factory=list)
 
@@ -51,3 +54,16 @@ class PredictionResponse(BaseModel):
     recommended_crop: str
     recommendation_reason: str
     confidence: float = Field(..., description="Confidence % of recommendation 0–100")
+
+
+class ScenarioResponse(BaseModel):
+    city: str
+    soil_type: str
+    target_crop: str
+    weather: WeatherResponse
+    scores: list[CropScore]
+    recommended_crop: str
+    recommendation_reason: str
+    confidence: float
+    target_score: Optional[CropScore] = None
+    best_alternative: Optional[CropScore] = None

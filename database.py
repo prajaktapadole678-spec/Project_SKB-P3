@@ -27,6 +27,7 @@ class CropTrait(Base):
     optimal_humidity_max = Column(Float, nullable=False)
     optimal_rainfall_min = Column(Float, nullable=False)
     optimal_rainfall_max = Column(Float, nullable=False)
+    optimal_soil_type = Column(String(50), default="Loamy")
     drought_tolerance = Column(String(20), default="medium")
     heat_tolerance = Column(String(20), default="medium")
     frost_tolerance = Column(String(20), default="medium")
@@ -68,6 +69,6 @@ def seed_database():
                         )
                         db.add(trait)
                 db.commit()
-                print("✅ Database seeded with default crop traits.")
+                print("[CropSense] Database seeded with default crop traits.")
     finally:
         db.close()
